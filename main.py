@@ -14,9 +14,11 @@ def criar_rotina_semanal(grupamentos):
         vizinhos = list(grafo.neighbors(dia))
 
         # Remover arestas para não treinar o mesmo grupamento em dias consecutivos
-        for vizinho in vizinhos:
-            if grupamento == grupamentos.get(vizinho, None):
-                grafo.remove_edge(dia, vizinho)
+
+        if grupamento != "Descanso":
+            for vizinho in vizinhos:
+                if grupamento == grupamentos.get(vizinho, None):
+                    grafo.remove_edge(dia, vizinho)
 
     return grafo
 
@@ -49,7 +51,7 @@ grupamentos_exemplo = {
     'Quarta': 'Costas',
     'Quinta': 'Ombros',
     'Sexta': 'Braços',
-    'Sábado': 'Descanso',
+    'Sábado': 'Braços',
     'Domingo': 'Descanso',
 }
 

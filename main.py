@@ -1,5 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import streamlit as st
+
 
 def criar_rotina_semanal(grupamentos):
     # Criando um grafo cíclico (um ciclo) representando os dias da semana
@@ -25,13 +27,11 @@ def is_cycle(grafo):
     except nx.NetworkXNoCycle:
         return False
 
+
 def colorir_grafo(grafo, grupamentos):
-    # Verificar se o grafo é um ciclo
     if not is_cycle(grafo):
-        # Se não for um ciclo, adicionar "Treino inválido" como atributo ao grafo
         grafo.graph["Treino"] = "Inválido"
 
-    # Mapear explicitamente os nomes dos grupos musculares para cores
     cores_mapping = {
         "Pernas": "red",
         "Peito": "blue",
@@ -41,29 +41,26 @@ def colorir_grafo(grafo, grupamentos):
         "Descanso": "lightgrey",
     }
 
-    # Atribuir cores com base no mapeamento
     cores = [cores_mapping[grupamentos[dia]] for dia in grafo.nodes]
-
-    # Criar um layout para a visualização do grafo
     pos = nx.circular_layout(grafo)
 
-    # Desenhar o grafo colorindo os nós de acordo com os grupamentos
-    nx.draw(grafo, pos, with_labels=True, font_weight="bold", node_size=700, node_color=cores)
+    fig, ax = plt.subplots()
+    nx.draw(grafo, pos, with_labels=True, font_weight="bold", node_size=700, node_color=cores, ax=ax)
 
-    # Adicionar a mensagem "Treino inválido" ao gráfico
     if "Treino" in grafo.graph and grafo.graph["Treino"] == "Inválido":
-        plt.text(0.5, 0.5, "Treino Inválido (Grafo Acíclico)", fontsize=20, ha="center", va="center", color="red",transform=plt.gca().transAxes)
+        plt.text(0.5, 0.5, "Treino Inválido (Grafo Acíclico)", fontsize=20, ha="center", va="center", color="red", transform=plt.gca().transAxes)
     else: 
-        plt.text(0.5, 0.5, "Treino Válido (Grafo com Ciclo)", fontsize=20, ha="center", va="center", color="green",transform=plt.gca().transAxes)
+        plt.text(0.5, 0.5, "Treino Válido (Grafo com Ciclo)", fontsize=20, ha="center", va="center", color="green", transform=plt.gca().transAxes)
 
-    # Adicionar uma legenda de cores
     legenda = [plt.Line2D([0], [0], marker="o", color="w", markerfacecolor=cor, markersize=10, label=grupo)
                for grupo, cor in cores_mapping.items()]
     plt.legend(handles=legenda, title="Grupos Musculares", loc="upper left")
 
-    plt.show()
+    # Exibir a figura no Streamlit passando a figura como argumento
+    st.pyplot(fig)
 
 # Exemplo de grupamentos musculares
+"""
 grupamentos_exemplo = {
     "Segunda": "Pernas",
     "Terça": "Peito",
@@ -73,7 +70,8 @@ grupamentos_exemplo = {
     "Sábado": "Descanso",
     "Domingo": "Descanso",
 }
+"""
 
 # Criar e visualizar a rotina com base nos grupamentos de exemplo
-rotina = criar_rotina_semanal(grupamentos_exemplo)
-colorir_grafo(rotina, grupamentos_exemplo)
+#rotina = criar_rotina_semanal(grupamentos_exemplo)
+#colorir_grafo(rotina, grupamentos_exemplo)

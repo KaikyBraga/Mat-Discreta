@@ -53,9 +53,9 @@ def colorir_grafo(grafo, grupamentos):
 
     # Adicionar a mensagem "Treino inválido" ao gráfico
     if 'Treino' in grafo.graph and grafo.graph['Treino'] == 'Inválido':
-        plt.text(0.5, 0.5, 'Treino Inválido (Grafo Desconexo)', fontsize=20, ha='center', va='center', color="red",transform=plt.gca().transAxes)
+        plt.text(0.5, 0.5, 'Treino Inválido (Grafo Acíclico)', fontsize=20, ha='center', va='center', color="red",transform=plt.gca().transAxes)
     else: 
-        plt.text(0.5, 0.5, 'Treino Válido (Grafo Conexo)', fontsize=20, ha='center', va='center', color="green",transform=plt.gca().transAxes)
+        plt.text(0.5, 0.5, 'Treino Válido (Grafo com Ciclo)', fontsize=20, ha='center', va='center', color="green",transform=plt.gca().transAxes)
 
     # Adicionar uma legenda de cores
     legenda = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=cor, markersize=10, label=grupo)

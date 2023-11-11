@@ -1,0 +1,7 @@
+h1 {
+    white-space: nowrap;
+    border-bottom: 2px solid #595757; /* Adiciona uma linha de borda semelhante à cor do botão */
+    padding-bottom: 10px; /* Adiciona espaço entre o título e a borda */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+    text-align: center;
+}

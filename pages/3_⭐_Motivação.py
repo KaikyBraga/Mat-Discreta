@@ -35,7 +35,7 @@ with open("styles.css") as f:
     # Exibir imagens redondas lado a lado com espaçamento e nomes abaixo delas
     st.image([kaiky, samuel], width=230, caption=["Kaiky Braga", "Samuel Lima"])
 
-    st.write("Olá! Somos alunos do 2° Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, iniciamos este projeto...")
+    st.write("Olá! Somos alunos do 2° Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, iniciamos este projeto com o intuito de representar por meio de Grafos estruturas de treinos de musculação válidas. Tudo isso somado com a interatividade proporcionada pela biblioteca Streamlit.")
 
 with st.container():
     if st.button("Clique para acessar o projeto no GitHub :)"):

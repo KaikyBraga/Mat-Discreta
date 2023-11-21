@@ -37,7 +37,7 @@ with st.container():
     restricoes = {
         'Bíceps': (3, 5),
         'Tríceps': (3, 5),
-        'Anti-braço': (2, 4),
+        'Antebraço': (2, 4),
         'Quadríceps': (3, 5),
         'Posterior de coxa': (3, 5),
         'Panturrilhas': (2, 4),

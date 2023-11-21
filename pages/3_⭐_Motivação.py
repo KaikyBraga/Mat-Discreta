@@ -33,9 +33,9 @@ with open("styles.css") as f:
     samuel = ImageOps.expand(samuel, border=30, fill=None)
 
     # Exibir imagens redondas lado a lado com espaçamento e nomes abaixo delas
-    st.image([kaiky, samuel], width=230, caption=["Kaiky Braga", "Samuel Lima"])
+    st.image([kaiky, samuel], width=350, caption=["Kaiky Braga", "Samuel Lima"])
 
-    st.write("Olá! Somos alunos do 2° Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, iniciamos este projeto com o intuito de representar por meio de Grafos estruturas de treinos de musculação válidas. Tudo isso somado com a interatividade proporcionada pela biblioteca Streamlit.")
+    st.write("Olá! Nós, estudantes do 2º Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, estamos entusiasmados em compartilhar nosso projeto, no qual buscamos visualizar de maneira gráfica as estruturas de treinos de musculação utilizando Grafos. Essa abordagem é aprimorada com a interatividade proporcionada pela biblioteca Streamlit. Estamos ansiosos para apresentar os resultados desta iniciativa que integra a precisão dos dados com a dinâmica da visualização, proporcionando uma experiência informativa e envolvente.")
 
 with st.container():
     if st.button("Clique para acessar o projeto no GitHub :)"):

@@ -1,9 +1,3 @@
-/*Para o botão de fazer download*/
-.st-emotion-cache-lkx26v.ef3psqc12 {
-    background-color: #026773; 
-    color: #FFFFFF; 
-}
-
 /*Para algumas letras no site*/
 .st-emotion-cache-xujc5b.e1nzilvr5 p {
     color: #000000; 
@@ -19,7 +13,7 @@
     color: #FFFFFF; 
 }
 
-/*Para o botãio que aparece em cima da imagem*/
+/*Para o botão que aparece em cima da imagem*/
 button[data-testid="StyledFullScreenButton"] {
     display: none;
 }
@@ -55,21 +49,6 @@ button[data-testid="StyledFullScreenButton"] {
 
 /*Para o texto do select box*/
 .st-c8.st-bf.st-c9.st-ca.st-cb.st-bh.st-cc.st-cd.st-ce {
-    color: #FFFFFF !important;
-}
-
-/*Para o símbolo do botão de upload*/
-.st-emotion-cache-1l1d1zw {
-    color: #FFFFFF !important;
-}
-
-/*Para as letras superiores do botão de upload*/
-.st-emotion-cache-u8hs99[data-testid="stFileDropzoneInstructions"] {
-    color: #FFFFFF;
-}
-
-/*Para as letras inferiores do botão de upload*/
-.st-emotion-cache-1t8kd5l {
     color: #FFFFFF !important;
 }
 

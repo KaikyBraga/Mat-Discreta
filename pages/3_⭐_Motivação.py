@@ -38,14 +38,9 @@ with open("styles.css") as f:
 
     st.write("Olá! Nós, estudantes do 2º Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, estamos entusiasmados em compartilhar nosso projeto, no qual buscamos visualizar de maneira gráfica as estruturas de treinos de musculação utilizando Grafos. Essa abordagem é aprimorada com a interatividade proporcionada pela biblioteca Streamlit. Estamos ansiosos para apresentar os resultados desta iniciativa que integra a precisão dos dados com a dinâmica da visualização, proporcionando uma experiência informativa e envolvente.")
 
-
-
-
-
-
 URL_STRING = "https://github.com/KaikyBraga/Mat-Discreta"
 
 st.markdown(
-    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #026773; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Clique aqui para acessar o link do Git Gub :)</a>',
+    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #026773; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Clique aqui para acessar o link do Git Hub :)</a>',
     unsafe_allow_html=True
 )

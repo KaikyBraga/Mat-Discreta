@@ -40,12 +40,12 @@ with open("styles.css") as f:
 
 
 
-# URL que você quer abrir
-link = "https://github.com/KaikyBraga/Mat-Discreta"
 
-# Criar o botão no Streamlit
-if st.button("Acessar Link"):
-    # Adicionar código HTML e JavaScript para abrir o link na mesma janela
-    js_code = f"window.open('{link}', '_self');"
-    html_code = f'<script>{js_code}</script>'
-    html(html_code)
+
+
+URL_STRING = "https://github.com/KaikyBraga/Mat-Discreta"
+
+st.markdown(
+    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Action Text on Button</a>',
+    unsafe_allow_html=True
+)

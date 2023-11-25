@@ -1,5 +1,5 @@
 import streamlit as st
-import webbrowser
+from streamlit.components.v1 import html
 from PIL import Image, ImageDraw, ImageOps
 
 st.set_page_config(page_title="Motivação")
@@ -45,6 +45,7 @@ link = "https://github.com/KaikyBraga/Mat-Discreta"
 
 # Criar o botão no Streamlit
 if st.button("Acessar Link"):
-    # Adicionar código JavaScript para abrir o link na mesma janela
+    # Adicionar código HTML e JavaScript para abrir o link na mesma janela
     js_code = f"window.open('{link}', '_self');"
-    st.write(f'<script>{js_code}</script>', unsafe_allow_html=True)
+    html_code = f'<script>{js_code}</script>'
+    html(html_code)

@@ -40,11 +40,10 @@ with open("styles.css") as f:
 
 
 
-def open_url():
-    url = "https://github.com/KaikyBraga/Mat-Discreta"
-    webbrowser.open_new_tab(url)
+# URL que você quer abrir
+link = "https://github.com/KaikyBraga/Mat-Discreta"
 
-st.title("Redirecionar para exemplo.com")
-
-if st.button("Clique para Redirecionar"):
-    open_url()
+# Criar o botão no Streamlit
+if st.button("Acessar Link"):
+    # Abrir o link no navegador padrão
+    webbrowser.open(link)

@@ -40,4 +40,4 @@ with open("styles.css") as f:
 with st.container():
     if st.button("Clique para acessar o projeto no GitHub :)"):
         site_url = "https://github.com/KaikyBraga/Mat-Discreta"
-        st.write(f'<meta http-equiv="refresh" content="0; url={site_url}" />', unsafe_allow_html=True)
+        st.write(f'<meta http-equiv="refresh" content="0; url={site_url}" />', unsafe_allow_html=False)

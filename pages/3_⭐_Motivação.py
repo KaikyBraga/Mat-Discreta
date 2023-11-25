@@ -1,4 +1,5 @@
 import streamlit as st
+from bokeh.models.widgets import Div
 from PIL import Image, ImageDraw, ImageOps
 
 st.set_page_config(page_title="Motivação")
@@ -41,3 +42,10 @@ with st.container():
     if st.button("Clique para acessar o projeto no GitHub :)"):
         site_url = "https://github.com/KaikyBraga/Mat-Discreta"
         st.write(f'<meta http-equiv="refresh" content="0; url={site_url}" />', unsafe_allow_html=False)
+
+if st.button("Clique para acessar o projeto no GitHub :)"):
+    js = "window.open('https://www.streamlit.io/')"  # New tab or window
+    js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)

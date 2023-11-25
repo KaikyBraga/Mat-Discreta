@@ -1,5 +1,5 @@
 import streamlit as st
-from bokeh.models.widgets import Div
+import webbrowser
 from PIL import Image, ImageDraw, ImageOps
 
 st.set_page_config(page_title="Motivação")
@@ -38,14 +38,13 @@ with open("styles.css") as f:
 
     st.write("Olá! Nós, estudantes do 2º Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, estamos entusiasmados em compartilhar nosso projeto, no qual buscamos visualizar de maneira gráfica as estruturas de treinos de musculação utilizando Grafos. Essa abordagem é aprimorada com a interatividade proporcionada pela biblioteca Streamlit. Estamos ansiosos para apresentar os resultados desta iniciativa que integra a precisão dos dados com a dinâmica da visualização, proporcionando uma experiência informativa e envolvente.")
 
-with st.container():
-    if st.button("Clique para acessar o projeto no GitHub :)"):
-        site_url = "https://github.com/KaikyBraga/Mat-Discreta"
-        st.write(f'<meta http-equiv="refresh" content="0; url={site_url}" />', unsafe_allow_html=False)
 
-if st.button("Clique para acessar o projeto no GitHub :)"):
-    js = "window.open('https://www.streamlit.io/')"  # New tab or window
-    js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+
+def open_url():
+    url = "https://github.com/KaikyBraga/Mat-Discreta"
+    webbrowser.open_new_tab(url)
+
+st.title("Redirecionar para exemplo.com")
+
+if st.button("Clique para Redirecionar"):
+    open_url()

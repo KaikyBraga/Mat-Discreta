@@ -103,3 +103,69 @@ h1 {
     margin-bottom: 20px; /* Adiciona espaço abaixo do título */
     text-align: center;
 }
+
+/*Para a cor das letras das fotos*/
+.st-emotion-cache-ltfnpr.e115fcil0 {
+    color: #000000;
+}
+
+/*Para ocultar o botão que aparece no título da Motivação*/
+a[href="#b397d34e"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+/*Para mudar a cor da letra do slecionar grupo muscular*/
+.st-emotion-cache-q8sbsg.e1nzilvr5 p {
+    color: #000000;
+}
+
+/*Para ocultar o botão que aparece no título da Seleção de exercícios*/
+a[href="#ba79e668"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+/*Para ocultar o botão que aparece nos outros títulos da Home*/
+a[href="#graph-s-training"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+a[href="#dfe08530"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+a[href="#8a4daa86"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+a[href="#33af4cb5"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+a[href="#ae0d6381"].st-emotion-cache-15zrgzn.e1nzilvr3 {
+    display: none;
+}
+
+/*Para ocultar o botão que aprece no título Selecione as atividade*/
+.st-emotion-cache-15zrgzn {
+    display: none;
+}
+
+/*Para as cores dos textos da Home*/
+.st-emotion-cache-10trblm.e1nzilvr1 {
+    color: #000000;
+}
+
+/*Para os botões*/
+.st-c8 {
+    background-color: #026773; /* Substitua "sua-cor-aqui" pelo código da cor desejada */
+    color: #000000; /* Substitua "cor-do-texto-aqui" pelo código da cor do texto desejada */
+    /* Adicione outros estilos conforme necessário */
+}
+
+.st-av {
+    background-color: #026773; /* Substitua #ff0000 pela cor desejada em formato hexadecimal, RGB, ou nome da cor. */
+}
+
+.st-emotion-cache-1avcm0n {
+    background-color: #F2E3D5; /* Substitua 'sua_cor' pela cor desejada em formato hexadecimal ou nome da cor */
+}
